@@ -14,6 +14,13 @@ const projects = [
         "live": "https://asiill.github.io/paper-and-pigment"
     },
     {
+        "name": "Weather app",
+        "description": "This Javascript application fetches and displays the current weather for a given city. It makes use of the OpenWeather API at https://openweathermap.org.",
+        "tools": "HTML | CSS | Javascript | webpack | OpenWeather API",
+        "repo": "https://github.com/asiill/weather-app",
+        "live": "https://asiill.github.io/weather-app"
+    },
+    {
         "name": "Battleship game",
         "description": "This is a Javascript implementation of the board game 'Battleship'.",
         "tools": "HTML | CSS | Javascript | webpack | Jest",
