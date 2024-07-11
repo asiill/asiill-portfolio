@@ -26,6 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+main {
+  /*
+  height of header element: 24px 
+  height of footer element: 24px
+  */
+  min-height: calc(100vh - 48px);
+  padding: 2rem 4rem 2rem 4rem;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
