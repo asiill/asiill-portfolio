@@ -14,9 +14,9 @@ const projects = [
         "live": "https://asiill.github.io/paper-and-pigment"
     },
     {
-        "name": "Weather app",
-        "description": "This Javascript application fetches and displays the current weather for a given city. It makes use of the OpenWeather API at https://openweathermap.org.",
-        "tools": "HTML | CSS | Javascript | webpack | OpenWeather API",
+        "name": "Weather display",
+        "description": "This Javascript application fetches and displays the current weather for a given city. It makes use of the OpenWeatherMap API.",
+        "tools": "HTML | CSS | Javascript | webpack | OpenWeatherMap API",
         "repo": "https://github.com/asiill/weather-app",
         "live": "https://asiill.github.io/weather-app"
     },

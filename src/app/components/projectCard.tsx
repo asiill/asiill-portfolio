@@ -10,7 +10,7 @@ export default function ProjectCard({ name, description, tools, path, links }: P
     const code = links[0];
     const live = links[1];
     return (
-        <div className="project-card flex flex-col gap-4 items-center text-center p-4 rounded-md shadow-[2px_4px_4px_rgba(0,0,0,0.38)] hover:shadow-[4px_8px_8px_rgba(0,0,0,0.38)] sm:flex-[0_0_calc(33.33%-24px)]">
+        <div className="project-card flex flex-col gap-4 items-center text-center p-4 rounded-md shadow-[2px_4px_4px_rgba(0,0,0,0.38)] hover:shadow-[4px_8px_8px_rgba(0,0,0,0.38)] sm:flex-[0_0_calc(50%-24px)]">
             <div><img src={path} className="w-full h-auto"></img></div>
             <h2>{name}</h2>
             <div>{description}</div>

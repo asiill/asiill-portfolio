@@ -17,7 +17,7 @@ export default function Header() {
                 <Link href="/projects">Projects</Link>
                 <Link href="/contact">Contact</Link>
             </nav>
-            <div>
+            <div className="flex flex-col justify-center items-center gap-4 sm:flex-row">
                 <Github />
             </div>
         </header>

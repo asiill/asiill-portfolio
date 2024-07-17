@@ -1,9 +1,10 @@
 import ProjectCard from "../components/projectCard";
-import projects from "../data/projects.js";
+import projects from "../../data/projects";
 
 export default function Projects() {
-  const getPath = (repo: string) => {
-    let path = `/images/projects/${repo}.png`;
+  const getPath = (name: string) => {
+    let str = name.toLowerCase().replaceAll(" ","");
+    let path = `/images/projects/${str}.png`;
     return path;
   };
 
@@ -14,7 +15,7 @@ export default function Projects() {
         {
           projects.map(item => {
             let id = projects.indexOf(item);
-            let path = getPath(item.repo);
+            let path = getPath(item.name);
             let links = [item.repo, item.live];
             return (
               <ProjectCard
