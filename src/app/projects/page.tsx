@@ -10,8 +10,8 @@ export default function Projects() {
 
   return (
     <main className="flex flex-col gap-6">
-      <h1>Some of my projects</h1>
-      <div className="flex flex-wrap justify-center items-center gap-6">
+      <h1>Some of my projects ↓</h1>
+      <div className="flex flex-col gap-6">
         {
           projects.map(item => {
             let id = projects.indexOf(item);

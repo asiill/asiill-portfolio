@@ -2,28 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background-color: #5a5353;
+}
+
+/* --- Corner borders --- */
+
+.container {
+  position: relative;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.top-left-h, .top-left-v,
+.bottom-right-h, .bottom-right-v {
+  position: absolute;
+  width: 10%;
+  height: 5px;
+  background-color: #a07178;
+}
+
+.top-left-h {
+  top: 0;
+  left: 0;
+  transform-origin: left top;
+}
+
+.top-left-v {
+  top: 0;
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(90deg);
+}
+
+.bottom-right-h {
+  bottom: 0;
+  right: 0;
+  transform-origin: right bottom;
+}
+
+.bottom-right-v {
+  bottom: 0;
+  right: 0;
+  transform-origin: right bottom;
+  transform: rotate(90deg);
 }
 
 h1 {
@@ -34,17 +57,94 @@ h2 {
   font-size: 24px;
 }
 
+h1, h2 {
+  color: #e6ccbe;
+}
+
 main {
-  /*
-  height of header element: 24px 
-  height of footer element: 24px
-  */
-  min-height: calc(100vh - 48px);
   padding: 2rem 4rem 2rem 4rem;
+}
+
+/* ----- header links ----- */
+
+nav a {
+  padding: 0.4rem;
+  position: relative;
+}
+
+nav a::before,
+nav a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  background-color: #a07178;
+  transition: transform 0.5s ease;
+}
+
+nav a::before {
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+}
+
+nav a::after {
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+}
+
+nav a:hover::before {
+  transform: scaleY(1);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* --- Home page links --- */
+
+.home-links a {
+  padding: 0.2rem;
+  position: relative;
+}
+
+.home-links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #a07178;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.home-links a:hover::before {
+  transform: scaleX(1);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .top-left-h, .top-left-v,
+  .bottom-right-h, .bottom-right-v {
+    display: none;
   }
 }
