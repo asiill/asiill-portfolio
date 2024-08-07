@@ -1,23 +1,34 @@
-import Link from "next/link";
 import Github from "./github";
 
 export default function Header() {
     return (
-        <header className="flex flex-col gap-4 py-4 px-16 text-white sm:flex-row sm:justify-between sm:items-center sm:gap-0 ">
-            <div>
-                <Link href="/">
+        <header className="flex flex-col gap-16 p-16 text-white">
+            <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center">
+                <div>
+                    <span className="text-4xl italic cursor-pointer hover:text-[#c8cc92]">as.</span>
+                </div>
+                <div className="flex flex-col gap-6 sm:flex-row sm:gap-8 sm:items-center">
+                    <nav className="flex flex-col gap-6 text-black text-lg sm:flex-row sm:gap-8">
+                        <div className="flex items-center justify-center rounded-lg p-2 bg-[#c8cc92] hover:opacity-80"><a href="#about">About</a></div>
+                        <div className="flex items-center justify-center rounded-lg p-2 bg-[#c8cc92] hover:opacity-80"><a href="#projects">Portfolio</a></div>
+                        <div className="flex items-center justify-center rounded-lg p-2 bg-[#c8cc92] hover:opacity-80"><a href="#contact">Contact</a></div>
+                    </nav>
                     <div>
-                        <span className="text-3xl italic hover:text-sage">as.</span>
+                        <Github 
+                            fill="white"
+                        />
                     </div>
-                </Link>
+                </div>
             </div>
-            <nav className="flex flex-col gap-4 text-sage sm:flex-row sm:gap-8">
-                <div><Link href="/">Home</Link></div>
-                <div><Link href="/projects">Portfolio</Link></div>
-                <div><Link href="/contact">Contact</Link></div>
-            </nav>
-            <div>
-                <Github />
+            <div className="flex flex-col gap-4 sm:justify-center sm:items-center">
+                <div className="flex flex-col gap-2 sm:justify-center sm:items-center">
+                    <p className="text-lg">Heyy, I'm</p>
+                    <h1>Aseel Shakra{"()"}</h1>
+                    <p className="text-xl">{"{"} a front-end web developer; {"}"}</p>
+                </div>
+                <div className="home-links text-lg">
+                <a href="#projects">➵ See my projects</a>
+                </div>
             </div>
         </header>
     );
