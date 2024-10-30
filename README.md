@@ -1,2 +1,2 @@
-## Getting Started
-My portfolio site create with Next.js
+## Portfolio site
+My portfolio site created with Next.js

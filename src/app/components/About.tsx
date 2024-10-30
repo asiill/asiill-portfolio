@@ -42,13 +42,15 @@ export default function About() {
                 <h2>About me :</h2>
                 <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:items-center md:place-items-center">
                     <div className="col-span-1">
-                        <p>...</p>
+                        <p>
+                            ...
+                        </p>
                     </div>
                     <div className="col-span-1 order-first md:order-last">
                         <Image 
                             src="/images/profile.jpg"
-                            width={500}
-                            height={333}
+                            width={420}
+                            height={280}
                             alt="profile picture"
                             style={{borderRadius:"0.5rem", minWidth:"11rem"}}
                         />

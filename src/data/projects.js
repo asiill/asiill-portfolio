@@ -29,7 +29,7 @@ const projects = [
     },
     {
         "name": "Color explorer",
-        "description": "Create a color palette for your project by entering a base color and a use case. The Groq API will suggest complementary color combinations. This application was created collaboratively through Chingu.",
+        "description": "This application was created collaboratively through Chingu. Create a color palette for your project by entering a base color and a use case. The Groq API will suggest complementary color combinations.",
         "tools": "React.js | Tailwind CSS | Groq API",
         "repo": "https://github.com/chingu-voyages/v49-tier2-team-17",
         "live": "https://v49-tier2-team-17.netlify.app/"
