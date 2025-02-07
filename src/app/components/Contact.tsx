@@ -43,10 +43,10 @@ export default function Contact() {
     <div id="contact" className="p-16 w-full bg-[#dddbbe]">
         {!submitted ? (
           <div className="flex flex-col gap-8">
-            <h2>Send me a message ...</h2>
-            <p className="text-lg">Feel free to reach out to me here if you would like to work on something together.</p>
+            <h2 className="text-2xl sm:text-4xl">Send me a message ...</h2>
+            <p className="text-base sm:text-lg">Feel free to reach out to me here if you would like to work on something together.</p>
             <form onSubmit={handleSubmit} name="contact" className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8">
-              <div className="flex flex-col gap-4 md:col-span-1">
+              <div className="flex flex-col gap-4 md:col-span-1 text-sm sm:text-base">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name">Your name</label>
                   <input
@@ -76,7 +76,7 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-2 md:col-span-1">
+              <div className="flex flex-col gap-2 md:col-span-1 text-sm sm:text-base">
                 <label htmlFor="message">Your message</label>
                 <textarea
                   className="min-h-32 p-1 text-black"
@@ -88,11 +88,11 @@ export default function Contact() {
                   }}
                   required
                 />
-                <button type="submit" className="self-end rounded-lg p-2.5 text-black text-lg bg-[#c8cc92] shadow-sm transition hover:opacity-80">Send</button>
+                <button type="submit" className="self-end rounded-lg p-2.5 text-black text-lg bg-[#c8cc92] shadow-sm transition text-sm sm:text-base hover:opacity-80">Send</button>
               </div>
             </form>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center">
-              <p className="text-lg">Or visit my GitHub profile to see what I&#39;m working on {"->"}</p>
+              <p className="text-base sm:text-lg">Or visit my GitHub profile to see what I&#39;m working on {"->"}</p>
               <Github 
                 fill="black"
               />

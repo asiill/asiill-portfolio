@@ -11,7 +11,7 @@ function Tools() {
 
     return (
         <div className="flex flex-col gap-6">
-            <h3>My toolkit</h3>
+            <h3 className="text-xl sm:text-3xl">My toolkit</h3>
             <div className="flex flex-wrap justify-between gap-6">
             {
                 tools.map(item => {
@@ -39,18 +39,31 @@ export default function About() {
     return (
         <div className="flex flex-col gap-12 p-16 w-full bg-[#dddbbe]">
             <div id="about" className="flex flex-col gap-6">
-                <h2>About me :</h2>
+                <h2 className="text-2xl sm:text-4xl">About me :</h2>
                 <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:items-center md:place-items-center">
-                    <div className="col-span-1">
+                    <div className="col-span-1 text-sm sm:text-base">
                         <p>
-                            ...
+                            Lured by its union of code and creativity, I have been
+                            exploring the possibilities of web development with the mission of
+                            helping people express their visions through bits and bytes.
+                            Thus far, I have been focused on navigating the front-end realm
+                            by experimenting with React-based applications.
+                        </p><br />
+                        <p>
+                            Lately however, I have also been leaning into the back-end of web development.
+                            My current project, <a href="https://github.com/asiill/palette-des-amis"  target="_blank" className="text-[#272727] font-bold italic transition hover:opacity-70">palette-des-amis</a>,
+                             is a collaborative attempt at working with databases and authentication.
+                            The theme of this application is inspired by an interest in connecting people through art.
+                        </p><br />
+                        <p>
+                            Feel free to write to me if you have quesitons or are interested in working on a project together!
                         </p>
                     </div>
                     <div className="col-span-1 order-first md:order-last">
                         <Image 
                             src="/images/profile.jpg"
-                            width={420}
-                            height={280}
+                            width={480}
+                            height={320}
                             alt="profile picture"
                             style={{borderRadius:"0.5rem", minWidth:"11rem"}}
                         />

@@ -18,10 +18,10 @@ function ProjectCard({ id, name, description, tools, path, links }: ProjectCardP
             <img src={path} className="min-w-44"></img>
           </div>
           <div className="flex flex-col gap-4 items-center text-center p-4">
-              <h3>{name}</h3>
-              <div>{description}</div>
-              <div className="italic">{tools}</div>
-              <div className="project-links flex flex-col gap-2 sm:flex-row">
+              <h3 className="text-xl sm:text-3xl">{name}</h3>
+              <div className="text-base sm:text-lg">{description}</div>
+              <div className="italic text-sm sm:text-base">{tools}</div>
+              <div className="project-links flex gap-2 text-sm sm:text-base">
                   <a href={code} target="_blank" className="flex gap-1 justify-center items-center p-2 rounded-lg bg-[#c8cc92] cursor-pointer transition hover:opacity-70">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                         <path d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" />
@@ -49,7 +49,7 @@ export default function Projects() {
 
   return (
     <div id="projects" className="flex flex-col gap-6 p-16 w-full">
-      <h2>Some of my projects ↓</h2>
+      <h2 className="text-2xl sm:text-4xl">Some of my projects ↓</h2>
       <div className="flex flex-col gap-16">
         {
           projects.map(item => {

@@ -7,19 +7,24 @@ body {
   background-color: #f2f0d5;
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, #c8cc92 0%, #f2f0d5 60%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h1 {
   color: #f1e6d0;
-  font-size: 48px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 40px;
   color: #aa6f78;
 }
 
 h3 {
-  font-size: 32px;
   color:  #7f8c77;
 }
 
@@ -42,7 +47,7 @@ header {
   background-size: cover;
 }
 
-.projects-link a::before {
+.underline-on-hover a::before {
   content: "";
   position: absolute;
   display: block;
@@ -55,7 +60,7 @@ header {
   transition: transform 0.5s ease;
 }
 
-.projects-link a:hover::before {
+.underline-on-hover a:hover::before {
   transform: scaleX(1);
 }
 
