@@ -1,10 +1,18 @@
 import Github from "./Github";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
     return (
-        <header className="flex flex-col gap-16 p-16 text-white">
-            <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center">
+        <header className="relative min-h-[300px] flex flex-col gap-16 p-16 text-white">
+            <Image 
+                src="/images/header.JPG"
+                alt=""
+                fill
+                style={{ objectFit: "cover" }}
+                className="absolute top-0 left-0 z-0"
+            />
+            <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center">
                 <div>
                     <span className="text-2xl italic cursor-pointer transition hover:text-[#c8cc92] sm:text-4xl">as.</span>
                 </div>
@@ -21,7 +29,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-4 sm:justify-center sm:items-center">
+            <div className="relative z-10 flex flex-col gap-4 sm:justify-center sm:items-center">
                 <div className="flex flex-col gap-2 sm:justify-center sm:items-center">
                     <p className="text-base sm:text-lg">Heyy, I&#39;m</p>
                     <h1 className="gradient-text text-3xl sm:text-5xl">Aseel Shakra</h1>

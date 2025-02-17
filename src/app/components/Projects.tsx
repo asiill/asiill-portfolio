@@ -1,4 +1,5 @@
 import projects from "../../data/projects";
+import Image from "next/image";
 
 type ProjectCardProps = {
   id: number;
@@ -13,11 +14,11 @@ function ProjectCard({ id, name, description, tools, path, links }: ProjectCardP
   const code = links[0];
   const live = links[1];
   return (
-      <div className="flex flex-col items-center gap-8 rounded-md min-w-44 shadow-md hover:shadow-lg transition-shadow md:flex-row">
-          <div className={`${id % 2 === 0 ? "md:order-first" : "md:order-last"}`}>
-            <img src={path} className="min-w-44"></img>
+      <div className="flex flex-col items-center gap-8 rounded-md min-w-44 shadow-md hover:shadow-lg transition-shadow md:grid md:grid-cols-2">
+          <div className={`${id % 2 === 0 ? "md:order-first" : "md:order-last"} span-1`}>
+          <Image src={path} alt={name} className="min-w-44" width={640} height={360} />
           </div>
-          <div className="flex flex-col gap-4 items-center text-center p-4">
+          <div className="flex flex-col gap-4 items-center text-center p-4 span-1">
               <h3 className="text-xl sm:text-3xl">{name}</h3>
               <div className="text-base sm:text-lg">{description}</div>
               <div className="italic text-sm sm:text-base">{tools}</div>
@@ -42,7 +43,7 @@ function ProjectCard({ id, name, description, tools, path, links }: ProjectCardP
 
 export default function Projects() {
   const getPath = (name: string) => {
-    const str = name.toLowerCase().replaceAll(" ","");
+    const str = name.toLowerCase().replaceAll(" ","").replaceAll("'","");
     const path = `/images/projects/${str}.png`;
     return path;
   };
@@ -53,13 +54,12 @@ export default function Projects() {
       <div className="flex flex-col gap-16">
         {
           projects.map(item => {
-            const id = projects.indexOf(item);
             const path = getPath(item.name);
             const links = [item.repo, item.live];
             return (
               <ProjectCard
-                  key={id}
-                  id={id}
+                  key={item.id}
+                  id={item.id}
                   name={item.name}
                   description={item.description}
                   tools={item.tools}

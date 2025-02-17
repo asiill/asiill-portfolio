@@ -51,7 +51,7 @@ export default function About() {
                         </p><br />
                         <p>
                             Lately however, I have also been leaning into the back-end of web development.
-                            My current project, <a href="https://github.com/asiill/palette-des-amis"  target="_blank" className="text-[#272727] font-bold italic transition hover:opacity-70">palette-des-amis</a>,
+                            My current project, <a href="https://github.com/asiill/palette-des-amis"  target="_blank" className="text-[#272727] font-bold italic transition hover:opacity-70">Friends&#39; Palette</a>,
                              is a collaborative attempt at working with databases and authentication.
                             The theme of this application is inspired by an interest in connecting people through art.
                         </p><br />

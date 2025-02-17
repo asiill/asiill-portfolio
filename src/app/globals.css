@@ -35,7 +35,7 @@ label {
 input, textarea {
   border-radius: 0.5rem;
 }
-
+/*
 header {
   background-image: url("/images/header.JPG");
   
@@ -45,7 +45,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+}*/
 
 .underline-on-hover a::before {
   content: "";
