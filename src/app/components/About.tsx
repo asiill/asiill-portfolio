@@ -37,8 +37,8 @@ function Tools() {
 
 export default function About() {
     return (
-        <div className="flex flex-col gap-12 p-16 w-full bg-[#dddbbe]">
-            <div id="about" className="flex flex-col gap-6">
+        <div  id="about" className="flex flex-col gap-12 w-full bg-[#dddbbe] p-8 sm:p-16">
+            <div className="flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-4xl">About me :</h2>
                 <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:items-center md:place-items-center">
                     <div className="col-span-1 text-sm sm:text-base">

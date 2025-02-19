@@ -35,17 +35,6 @@ label {
 input, textarea {
   border-radius: 0.5rem;
 }
-/*
-header {
-  background-image: url("/images/header.JPG");
-  
-  min-height: 300px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
 
 .underline-on-hover a::before {
   content: "";
@@ -64,10 +53,25 @@ header {
   transform: scaleX(1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.arrow {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.semi-circle {
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75px;
+  width: 125px;
+  border-radius: 100px 100px 0 0;
 }
 
 @media only screen and (max-device-width: 1366px) {

@@ -14,7 +14,7 @@ function ProjectCard({ id, name, description, tools, path, links }: ProjectCardP
   const code = links[0];
   const live = links[1];
   return (
-      <div className="flex flex-col items-center gap-8 rounded-md min-w-44 shadow-md hover:shadow-lg transition-shadow md:grid md:grid-cols-2">
+      <div className="flex flex-col items-center gap-6 min-w-44 shadow-md hover:shadow-lg transition-shadow md:grid md:grid-cols-2">
           <div className={`${id % 2 === 0 ? "md:order-first" : "md:order-last"} span-1`}>
           <Image src={path} alt={name} className="min-w-44" width={640} height={360} />
           </div>
@@ -49,7 +49,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects" className="flex flex-col gap-6 p-16 w-full">
+    <div id="projects" className="flex flex-col gap-6 w-full p-8 sm:p-16">
       <h2 className="text-2xl sm:text-4xl">Some of my projects ↓</h2>
       <div className="flex flex-col gap-16">
         {

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Tajawal } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const tajawal = Tajawal({ 
+  weight: "400",
+  subsets: ["latin"] 
+});
 
 export const metadata: Metadata = {
   title: "Aseel Shakra",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className={tajawal.className}>
         <Header />
         {children}
       </body>

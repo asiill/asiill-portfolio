@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="p-16 w-full bg-[#dddbbe]">
+    <div id="contact" className="w-full bg-[#dddbbe] p-8 pb-16 sm:p-16">
         {!submitted ? (
           <div className="flex flex-col gap-8">
             <h2 className="text-2xl sm:text-4xl">Send me a message ...</h2>
@@ -92,7 +92,7 @@ export default function Contact() {
               </div>
             </form>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center">
-              <p className="text-base sm:text-lg">Or visit my GitHub profile to see what I&#39;m working on {"->"}</p>
+              <p className="text-base sm:text-lg">Or visit my GitHub profile to see what I&#39;m working on ➵ </p>
               <Github 
                 fill="black"
               />

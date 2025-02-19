@@ -18,7 +18,7 @@ const projects = [
     {
         "id": 2,
         "name": "Paper and Pigment",
-        "description": "This is a template for an e-commerce website representing an art store. This project introduced me to working with the React Router and the React Context API.",
+        "description": "This is a template for an e-commerce website representing an art store. This project introduced me to the React Router and the React Context API.",
         "tools": "React.js | Tailwind CSS",
         "repo": "https://github.com/asiill/paper-and-pigment",
         "live": "https://asiill.github.io/paper-and-pigment"
