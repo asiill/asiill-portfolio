@@ -58,6 +58,7 @@ input, textarea {
   border-width: 0 1px 1px 0;
   display: inline-block;
   padding: 10px;
+  transition: transform 0.1s ease;
 }
 
 .up {
@@ -72,6 +73,16 @@ input, textarea {
   height: 75px;
   width: 125px;
   border-radius: 100px 100px 0 0;
+  transition: height 0.1s ease;
+}
+
+.semi-circle:hover {
+  height: 90px;
+  cursor: pointer;
+}
+
+.semi-circle:hover .arrow {
+  transform: scale(1.2) rotate(-135deg);; 
 }
 
 @media only screen and (max-device-width: 1366px) {
