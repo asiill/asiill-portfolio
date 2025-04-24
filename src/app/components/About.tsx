@@ -56,7 +56,7 @@ export default function About() {
                             The theme of this application is inspired by an interest in connecting people through art.
                         </p><br />
                         <p>
-                            Feel free to write to me if you have quesitons or are interested in working on a project together!
+                            Feel free to write to me if you have questions or are interested in working on a project together!
                         </p>
                     </div>
                     <div className="col-span-1 order-first md:order-last">
